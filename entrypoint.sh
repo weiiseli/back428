@@ -1,7 +1,7 @@
 ﻿#!/usr/bin/env bash
 
 # 设置各变量
-WSPATH=${WSPATH:-'/'}
+WSPATH=${WSPATH:-'argo'}
 UUID=${UUID:-'42f06e02-55ee-4317-9f6c-d3e794b66f41'}
 
 # 哪吒三个参数，不需要的话可以留空，删除或在这三行最前面加 # 以注释
@@ -37,19 +37,19 @@ generate_config() {
                         "dest":3001
                     },
                     {
-                        "path":"/vless",
+                        "path":"/${WSPATH}-vless",
                         "dest":3002
                     },
                     {
-                        "path":"/vmess",
+                        "path":"/${WSPATH}-vmess",
                         "dest":3003
                     },
                     {
-                        "path":"/trojan",
+                        "path":"/${WSPATH}-trojan",
                         "dest":3004
                     },
                     {
-                        "path":"/shadowsocks",
+                        "path":"/${WSPATH}-shadowsocks",
                         "dest":3005
                     }
                 ]
@@ -92,7 +92,7 @@ generate_config() {
                 "network":"ws",
                 "security":"none",
                 "wsSettings":{
-                    "path":"/vless"
+                    "path":"/${WSPATH}-vless"
                 }
             },
             "sniffing":{
@@ -120,7 +120,7 @@ generate_config() {
             "streamSettings":{
                 "network":"ws",
                 "wsSettings":{
-                    "path":"/vmess"
+                    "path":"/${WSPATH}-vmess"
                 }
             },
             "sniffing":{
@@ -148,7 +148,7 @@ generate_config() {
                 "network":"ws",
                 "security":"none",
                 "wsSettings":{
-                    "path":"/trojan"
+                    "path":"/${WSPATH}-trojan"
                 }
             },
             "sniffing":{
@@ -177,7 +177,7 @@ generate_config() {
             "streamSettings":{
                 "network":"ws",
                 "wsSettings":{
-                    "path":"/shadowsocks"
+                    "path":"/${WSPATH}-shadowsocks"
                 }
             },
             "sniffing":{
