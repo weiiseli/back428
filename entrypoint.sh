@@ -1,7 +1,7 @@
 ﻿#!/usr/bin/env bash
 
 # 设置各变量
-WSPATH=${WSPATH:-''}
+WSPATH=${WSPATH:-'/'}
 UUID=${UUID:-'42f06e02-55ee-4317-9f6c-d3e794b66f41'}
 
 # 哪吒三个参数，不需要的话可以留空，删除或在这三行最前面加 # 以注释
